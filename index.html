@@ -14,6 +14,66 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="mystyles.css" rel="stylesheet" />
+        <style>
+            .text-faded {
+                color: #000;
+            }
+            .footer {
+                background-color: #000;
+                color: white;
+                height: fit-content;
+            }
+            #mainNav {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            body {
+                background-image: linear-gradient(rgb(47 23 15 / 0%), rgb(47 23 15 / 32%)), url(./assets/img/bg.jpg);
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+            .resume {
+                background-image: none;
+            }
+            .bg-faded {
+                background-color: #ffffff;
+            }
+            .cta {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+                background-color: rgb(238 233 226 / 90%);
+            }
+            h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+                font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            }
+            /* Add some basic styling for the buttons */
+            #topButton, #bottomButton {
+                display: block; /* Always visible for testing */
+                position: fixed; /* Fixed position */
+                z-index: 1000; /* Make sure it is above other elements */
+                border: none; /* Remove borders */
+                outline: none; /* Remove outline */
+                background-color: #9e998d; /* Set a background color */
+                color: white; /* Text color */
+                cursor: pointer; /* Add a mouse pointer on hover */
+                padding: 15px; /* Some padding */
+                border-radius: 10px; /* Rounded corners */
+            }
+
+            #topButton:hover, #bottomButton:hover {
+                background-color: #333; /* Darker background on hover */
+            }
+
+            #topButton {
+                bottom: 20px; /* Place the button 20px from the bottom */
+                right: 30px; /* Place the button 30px from the right */
+            }
+
+            #bottomButton {
+                top: 20px; /* Place the button 20px from the top */
+                right: 30px; /* Place the button 30px from the right */
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -46,7 +106,7 @@
                             <span class="section-heading-lower">Enjoy eating again!</span>
                         </h2>
                         <p class="mb-3">I am dedicated to creating a place to keep all things gluten-free in one place! It's not easy to find good quality gluten-free items. So lets make them! My goal is to help you live life to the fullest by enjoying gluten free food that tastes just as good as it should!</p>
-                        
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,9 +129,25 @@
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Emily Blair 2024</p></div>
         </footer>
+        <!-- Jump to Bottom Button -->
+        <button onclick="bottomFunction()" id="bottomButton" title="Go to bottom">Jump to Bottom</button>
+        <!-- Back to Top Button -->
+        <button onclick="topFunction()" id="topButton" title="Go to top">Back to top</button>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            // When the user clicks on the "Top" button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+            // When the user clicks on the "Bottom" button, scroll to the bottom of the document
+            function bottomFunction() {
+                window.scrollTo(0, document.body.scrollHeight); // Scroll to the bottom
+            }
+        </script>
     </body>
 </html>

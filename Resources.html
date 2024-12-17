@@ -13,6 +13,20 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="mystyles.css" rel="stylesheet" />
+        <script>
+            // Array of gluten-free jokes
+            const jokes = [
+                "Why did the gluten-free baker go to therapy? Because he couldn't find his inner yeast.",
+                "What do you call a gluten-free joke? A wheat-free laugh!",
+                "Why don't gluten-free people make good comedians? They can't handle the punchlines!"
+            ];
+
+            // Function to generate a random joke
+            function generateJoke() {
+                const randomIndex = Math.floor(Math.random() * jokes.length);
+                document.getElementById('jokeDisplay').innerText = jokes[randomIndex];
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -35,6 +49,7 @@
                 </div>
             </div>
         </nav>
+        
         <section class="page-section cta">
             <div class="container">
                 <div class="row">
@@ -43,7 +58,39 @@
                             <h2 class="section-heading mb-5">
                                 <span class="section-heading-lower">Resources</span>
                             </h2>
-                            Learn More about Gluten Intolerances:
+                            <!-- Embed the Tableau graph here -->
+                            <div class='tableauPlaceholder' id='viz1734458065182' style='position: relative'>
+                                <noscript>
+                                    <a href='#'>
+                                        <img alt='Diferencia precios sin o con gluten' src='https://public.tableau.com/static/images/Di/Diferneciapreciossinglutenycongluten/Hoja1/1_rss.png' style='border: none' />
+                                    </a>
+                                </noscript>
+                                <object class='tableauViz' style='display:none;'>
+                                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                    <param name='embed_code_version' value='3' /> 
+                                    <param name='site_root' value='' />
+                                    <param name='name' value='Diferneciapreciossinglutenycongluten/Hoja1' />
+                                    <param name='tabs' value='no' />
+                                    <param name='toolbar' value='yes' />
+                                    <param name='static_image' value='https://public.tableau.com/static/images/Di/Diferneciapreciossinglutenycongluten/Hoja1/1.png' /> 
+                                    <param name='animate_transition' value='yes' />
+                                    <param name='display_static_image' value='yes' />
+                                    <param name='display_spinner' value='yes' />
+                                    <param name='display_overlay' value='yes' />
+                                    <param name='display_count' value='yes' />
+                                    <param name='language' value='en-US' />
+                                </object>
+                            </div>
+                            <script type='text/javascript'>
+                                var divElement = document.getElementById('viz1734458065182');
+                                var vizElement = divElement.getElementsByTagName('object')[0];
+                                vizElement.style.width='100%';
+                                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                                var scriptElement = document.createElement('script');
+                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                            </script>
+                            <p>Learn More about Gluten Intolerances:</p>
                             <ul class="list-unstyled list-resources mb-5 text-left mx-auto">
                                 <li class="list-unstyled-item list-resources-item">
                                     <a href="https://www.celiac.org/">Celiac Disease Foundation</a>
@@ -63,14 +110,19 @@
                                 <li>Some of my favorite recipe resources:</li>
                                 <li class="list-unstyled-item list-resources-item">
                                     <a href="https://www.mamaknowsglutenfree.com/">Mama Knows Gluten Free</a>
+                                </li>
                                 <li class="list-unstyled-item list-resources-item">
-                                        <a href="https://glutenfreeonashoestring.com/where-to-start//">Gluten Free on a Shoestring</a>    
-                                        <li class="list-unstyled-item list-resources-item">
-                                            <a href="https://mygluten-freekitchen.com/">My Gluten Free Kitchen</a>
-                                            <li class="list-unstyled-item list-resources-item">
-                                                <a href="https://thesavoryceliac.com//">The Savory Celiac</a>
+                                    <a href="https://glutenfreeonashoestring.com/where-to-start//">Gluten Free on a Shoestring</a>    
+                                </li>
+                                <li class="list-unstyled-item list-resources-item">
+                                    <a href="https://mygluten-freekitchen.com/">My Gluten Free Kitchen</a>
+                                </li>
+                                <li class="list-unstyled-item list-resources-item">
+                                    <a href="https://thesavoryceliac.com//">The Savory Celiac</a>
+                                </li>
                             </ul>
-                            </ul>
+                            <button onclick="generateJoke()" class="btn btn-primary">Generate Joke</button>
+                            <p id="jokeDisplay" class="mt-3">Click the button to get a gluten-free joke!</p>
                         </div>
                     </div>
                 </div>
