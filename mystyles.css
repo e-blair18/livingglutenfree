@@ -1,0 +1,32 @@
+.text-faded {
+    color: #000;
+}
+.footer {
+    background-color: #000;
+    color:white;
+}
+#mainNav {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+body {
+    background-image: linear-gradient(rgb(47 23 15 / 0%), rgb(47 23 15 / 32%)), url(./assets/img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+/*Don't use an image on the resume page*/
+.resume {
+    background-image: none;
+
+
+}
+.bg-faded {
+    background-color: #ffffff;
+}
+.cta {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: rgb(238 233 226 / 90%);
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
